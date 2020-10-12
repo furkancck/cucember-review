@@ -18,4 +18,8 @@ public class LoginStepDefsWithParams {
         System.out.println("Clicking the sign in button");
     }
 
+    @When("I login using {string} and {string}")
+    public void iLoginUsingAnd(String username, String pw) {
+        System.out.println("Logging in using "+username+" and "+pw);
+    }
 }
