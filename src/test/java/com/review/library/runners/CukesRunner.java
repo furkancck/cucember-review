@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com.review.library.step_defs",
-        dryRun = false, tags = "@wip"
+        dryRun = false, tags = "@librarian"
 )
 public class CukesRunner {
 
