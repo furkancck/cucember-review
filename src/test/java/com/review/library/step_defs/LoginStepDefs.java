@@ -8,20 +8,29 @@ import io.cucumber.java.en.When;
 public class LoginStepDefs {
     @Given("I am on the login page")
     public void i_am_on_the_login_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("Login page.");
     }
 
-    @When("I login as librarian user")
+
+    @When("I login as a librarian")
     public void i_login_as_librarian_user() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("Logging in as a librarian");
     }
+
+    @When("I login as a student")
+    public void i_login_as_a_student() {
+        System.out.println("Logging in as a student");
+    }
+
+    @When("I login as a admin")
+    public void i_login_as_a_admin() {
+        System.out.println("Logging in as an admin");
+    }
+
 
     @Then("dashboard page should be displayed")
     public void dashboard_page_should_be_displayed() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("Verifying dashboard page...");
     }
 
 }

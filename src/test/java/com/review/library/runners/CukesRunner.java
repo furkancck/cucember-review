@@ -5,7 +5,9 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features"
+        features = "src/test/resources/features",
+        glue = "com.review.library.step_defs",
+        dryRun = false, tags = "@smoke"
 )
 public class CukesRunner {
 
