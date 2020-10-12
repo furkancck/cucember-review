@@ -8,7 +8,7 @@ Feature: Page navigation links
     When I click on "Users" link
     Then "Users" page should be displayed
 
-  
+
   Scenario: Go to books page
     Given I am on the login page
     And I login as a librarian
