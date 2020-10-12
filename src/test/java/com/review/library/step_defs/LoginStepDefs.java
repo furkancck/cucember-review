@@ -6,6 +6,9 @@ import com.review.library.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LoginStepDefs {
@@ -41,6 +44,10 @@ public class LoginStepDefs {
     @Then("dashboard page should be displayed")
     public void dashboard_page_should_be_displayed() {
         System.out.println("Verifying dashboard page...");
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),4);
+        wait.until(ExpectedConditions.urlContains("dashboard"));
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(actualUrl.endsWith("dashboard"));
     }
 
 }
