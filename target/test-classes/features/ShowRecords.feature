@@ -3,7 +3,7 @@ Feature: Show Records Functionality
   Background:
     Given I am on the login page
     And I login as a librarian
-  @wip
+
   Scenario: verify default values in Users page
     When I click on "Users" link
     Then show records default value should be 10
