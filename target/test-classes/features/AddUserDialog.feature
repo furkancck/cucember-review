@@ -1,6 +1,5 @@
 Feature: Add new users dialog
 
-  @wip
   Scenario: Placeholder tests
     Given I am on the login page
     And I login using following credentials:
@@ -13,4 +12,17 @@ Feature: Add new users dialog
       | email    | Email     |
       | password | Password  |
       | address  |           |
+
+  @wip
+  Scenario: Verify User information
+    Given I am on the login page
+    And I login using following credentials:
+      | email    | librarian21@library |
+      | password | aZ849tSZ            |
+    And I click on "Users" link
+    When I search for "486"
+    Then table should contain this data
+      | User ID   | 486                             |
+      | Full Name | Asuncion Pfeffer                |
+      | Email     | Oralia Daugherty234@library.com |
 

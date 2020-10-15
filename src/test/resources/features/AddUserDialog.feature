@@ -22,7 +22,7 @@ Feature: Add new users dialog
     And I click on "Users" link
     When I search for "486"
     Then table should contain this data
-      | User ID | Full Name        | Email                           |
-      | 486     | Asuncion Pfeffer | Oralia Daugherty234@library.com |
-
+      | User ID   | 486                             |
+      | Full Name | Asuncion Pfeffer                |
+      | Email     | Oralia Daugherty234@library.com |
 
