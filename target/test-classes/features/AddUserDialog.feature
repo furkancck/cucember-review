@@ -13,7 +13,7 @@ Feature: Add new users dialog
       | password | Password  |
       | address  |           |
 
-  @wip
+
   Scenario: Verify User information
     Given I am on the login page
     And I login using following credentials:

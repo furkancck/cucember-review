@@ -1,0 +1,17 @@
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/AddUsersStepDefs.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/utilities/BrowserUtilities.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/utilities/ConfigurationReader.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/pages/DashboardPage.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/pages/LoginPage.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/PageNavigationStepDefs.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/LoginStepDefsWithParams.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/Hooks.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/runners/FailedTestRunner.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/utilities/Driver.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/DashboardStepDefs.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/pages/PageBase.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/LoginStepDefs.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/ShowRecordsStepDefs.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/pages/UsersPage.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/runners/CukesRunner.java
+/Users/furkancicek/IdeaProjects/JavaProgrammingB15VA/cucumber-review/src/test/java/com/review/library/step_defs/UserTableStepDefs.java

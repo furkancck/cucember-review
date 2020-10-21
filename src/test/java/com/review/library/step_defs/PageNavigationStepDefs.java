@@ -1,6 +1,7 @@
 package com.review.library.step_defs;
 
 import com.review.library.pages.DashboardPage;
+import com.review.library.utilities.BrowserUtilities;
 import com.review.library.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,10 +15,10 @@ public class PageNavigationStepDefs {
 
     @When("I click on {string} link")
     public void iClickOnLink(String link) {
-        System.out.println("Clicking on "+link+" link...");
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+        System.out.println("Clicking on " + link + " link...");
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
         wait.until(ExpectedConditions.visibilityOf(dashboardPage.dashboard));
-        switch (link.toLowerCase()){
+        switch (link.toLowerCase()) {
             case "dashboard":
                 dashboardPage.dashboard.click();
                 break;
@@ -31,21 +32,19 @@ public class PageNavigationStepDefs {
     }
 
     @Then("{string} page should be displayed")
-    public void pageShouldBeDisplayed(String pageName) {
-        System.out.println("Verifying the Page Header...");
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
-        wait.until(ExpectedConditions.visibilityOf(dashboardPage.dashboard));
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().endsWith(pageName.toLowerCase()));
-        switch (pageName.toLowerCase()){
+    public void pageShouldBeDisplayed(String page) {
+        BrowserUtilities.wait(1);
+        switch (page.toLowerCase()) {
             case "users":
                 String actual = dashboardPage.pageHeader.getText();
-                Assert.assertEquals("User Management",actual);
+                Assert.assertEquals("User Management", actual);
+                System.out.println(actual + " verified");
                 break;
             case "books":
                 actual = dashboardPage.pageHeader.getText();
-                Assert.assertEquals("Book Management",actual);
+                Assert.assertEquals("Book Management", actual);
+                System.out.println(actual + " verified");
                 break;
         }
-        System.out.println("Verification, Done..");
     }
 }
