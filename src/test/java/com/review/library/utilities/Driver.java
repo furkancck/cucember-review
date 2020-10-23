@@ -6,31 +6,31 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Driver {
-    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
-    private Driver(){}
+    private Driver() {
+    }
 
-    public static WebDriver getDriver(){
-        if(driver == null){
+    public static WebDriver getDriver() {
+        if (driverPool.get() == null) {
             String browser = ConfigurationReader.getProperty("browser");
-            switch (browser){
+            switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driverPool.set(new ChromeDriver());
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
                     break;
             }
         }
-        return driver;
+        return driverPool.get();
     }
-
-
-
     public static void closeDriver(){
-        driver.quit();
-        driver = null;
+        if(driverPool.get()!=null){
+            driverPool.get().quit();
+            driverPool.remove();
+        }
     }
 }

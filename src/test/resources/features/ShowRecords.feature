@@ -1,3 +1,4 @@
+@smoke
 Feature: Show Records Functionality
 
   Background:

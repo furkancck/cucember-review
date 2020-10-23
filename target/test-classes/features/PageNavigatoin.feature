@@ -1,4 +1,3 @@
-@smoke
 Feature: Page navigation links
 
 

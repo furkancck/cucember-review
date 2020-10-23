@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: Page navigation links
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.498 s <<< FAILURE! - in Page navigation links
+Page navigation links.Go to users page  Time elapsed: 17.076 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@class='title'][.='Dashboard']' (tried for 5 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='title'][.='Dashboard']"}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro.local', ip: '2601:154:8200:1580:0:0:0:a14e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/mz/pvh9dsc53c1...}, goog:chromeOptions: {debuggerAddress: localhost:58126}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 46d8a7d56612f7d3d3560612752457a6
+*** Element info: {Using=xpath, value=//span[@class='title'][.='Dashboard']}
+

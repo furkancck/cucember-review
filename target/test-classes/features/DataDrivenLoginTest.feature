@@ -52,7 +52,7 @@ Feature: User account tests
       | librarian21@library | aZ849tSZ | Test Librarian 21 |
       | librarian22@library | bJRnAAyp | Test Librarian 22 |
 
-  @wip
+
   Scenario Template: Another verify user information <name>
     When I login using following credentials:
       | email    | <email>    |

@@ -58,10 +58,14 @@
                 <configuration>
                     <includes>
                         <include>**/CukesRunner.java</include>
-                        <include>**/FailedTestRunner.java</include>
+                        <!--                        <include>**/FailedTestRunner.java</include>-->
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>alphabetical</runOrder>
+                    <parallel>methods</parallel>
+                    <threadCount>3</threadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
+                    <forkCount>2C</forkCount>
                 </configuration>
             </plugin>
             <plugin>

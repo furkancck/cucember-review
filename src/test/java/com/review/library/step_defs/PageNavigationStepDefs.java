@@ -3,6 +3,7 @@ package com.review.library.step_defs;
 import com.review.library.pages.DashboardPage;
 import com.review.library.utilities.BrowserUtilities;
 import com.review.library.utilities.Driver;
+import com.review.library.utilities.LibraryConstants;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -47,4 +48,25 @@ public class PageNavigationStepDefs {
                 break;
         }
     }
+
+
+    @When("I go/navigate to {string} page")
+    public void iGoToPage(String page) {
+        System.out.println("Going to page -> " + page.toLowerCase());
+        switch (page.toLowerCase()) {
+            case LibraryConstants.DASHBOARD_ALL_LOWER:
+                dashboardPage.dashboard.click();
+                break;
+            case LibraryConstants.BOOKS_ALL_LOWER:
+                dashboardPage.books.click();
+                break;
+            case LibraryConstants.USERS_ALL_LOWER:
+                dashboardPage.users.click();
+                break;
+            default:
+                Assert.fail("Failed due to wrong page name..");
+        }
+
+    }
+
 }

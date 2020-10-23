@@ -3,6 +3,7 @@ package com.review.library.step_defs;
 import com.review.library.pages.LoginPage;
 import com.review.library.utilities.ConfigurationReader;
 import com.review.library.utilities.Driver;
+import com.review.library.utilities.LibraryConstants;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -37,7 +38,7 @@ public class LoginStepDefs {
     @When("I login as a student")
     public void i_login_as_a_student() {
         System.out.println("Logging in as a student");
-        loginPage.login(ConfigurationReader.getProperty("student_email"),ConfigurationReader.getProperty("student_password"));
+        loginPage.login(ConfigurationReader.getProperty("student_email"), ConfigurationReader.getProperty("student_password"));
     }
 
     @When("I login as a admin")
@@ -59,6 +60,35 @@ public class LoginStepDefs {
     public void iLoginUsingFollowingCredentials(Map<String, String> credentials) {
         String email = credentials.get("email");
         String password = credentials.get("password");
-        loginPage.login(email,password);
+        loginPage.login(email, password);
+    }
+
+    @Then("books page should be displayed")
+    public void booksPageShouldBeDisplayed() {
+        System.out.println("Verifying books page...");
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 4);
+        wait.until(ExpectedConditions.urlContains("books"));
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(actualUrl.endsWith("books"));
+    }
+
+    @And("I login to application as a {word}")
+    public void iLoginToApplicationAsA(String user) {
+        String email = null, password = null;
+        switch (user.toLowerCase()) {
+            case LibraryConstants.STUDENT_ALL_LOWER:
+                email = ConfigurationReader.getProperty("student_email");
+                password = ConfigurationReader.getProperty("student_password");
+                break;
+            case LibraryConstants.LIBRARIAN_ALL_LOWER:
+                email = ConfigurationReader.getProperty("librarian_email");
+                password = ConfigurationReader.getProperty("librarian_password");
+                break;
+            default:
+                Assert.fail("Wrong user info tried..");
+        }
+        loginPage.login(email, password);
+
+
     }
 }
