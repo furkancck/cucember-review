@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: Books Table
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.28 s <<< FAILURE! - in Books Table
+Books Table.Verify Search Results  Time elapsed: 8.28 s  <<< FAILURE!
+java.lang.AssertionError: 1984 was not found
+

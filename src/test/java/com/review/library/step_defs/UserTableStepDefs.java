@@ -20,7 +20,7 @@ public class UserTableStepDefs {
     public void i_search_for(String searchString) {
         BrowserUtilities.waitForClickability(usersPage.search, 5);
         usersPage.search.sendKeys(searchString);
-        BrowserUtilities.wait(1);
+        BrowserUtilities.wait(3);
     }
 
     @Then("table should contain rows with {string}")
