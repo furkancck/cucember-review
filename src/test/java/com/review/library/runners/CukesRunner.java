@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "com.review.library.step_defs",
-        dryRun = false, tags = "@smoke"
+        dryRun = false, tags = "@wip"
 )
 public class CukesRunner {
 
