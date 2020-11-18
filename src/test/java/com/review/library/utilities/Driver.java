@@ -17,7 +17,7 @@ public class Driver {
 
     public static WebDriver getDriver() {
         if (driverPool.get() == null) {
-            String browser = ConfigurationReader.getProperty("browser");
+            String browser = System.getProperty("browser") != null ? System.getProperty("browser") : ConfigurationReader.getProperty("browser");
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
@@ -29,7 +29,7 @@ public class Driver {
                     break;
                 case "remote-chrome":
                     try {
-                        URL url = new URL("http://3.91.181.54:4444/wd/hub");
+                        URL url = new URL("http://3.84.212.49:4444/wd/hub");
                         ChromeOptions chromeOptions = new ChromeOptions();
                         driverPool.set(new RemoteWebDriver(url, chromeOptions));
                     } catch (MalformedURLException e) {
